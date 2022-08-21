@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <h1>Angular com API REST</h1>
+            <div class="navegacao">
+                <a class="Home" [routerLink]="['']">Home</a>
+                <a class="new" [routerLink]="['/Home']">Novo Usuário</a>
+                <a class="ver" [routerLink]="['/Lista-Usuarios']">Lista de Usuário</a>
+                <a class="editar" [routerLink]="['/Editar-Usuario']">Editar Usuário</a>
+            </div>
+        </header> 
+    <main>
+        <h3>Lista de Usuarios</h3>
+<ul>
+    <li *ngFor="let U of contatos">
+         Id:{{U.id}}
+        <br>
+         Nome: {{U.nome}}
+        <br>
+        email: {{U.email}}
+        <br>
+        senha: {{U.senha}}
+        <br>
+        Telefone: {{U.telefone}}
+    </li>
+</ul>
+    </main>
+</body>
+</html>
